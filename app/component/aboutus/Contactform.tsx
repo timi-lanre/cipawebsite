@@ -1,0 +1,90 @@
+"use client"
+import { MapPin, PhoneCall, Mail, Linkedin  } from 'lucide-react';
+export default function Contactform(){
+  return (
+    <div className="flex flex-col lg:flex-row gap-2 items-stretch w-full">
+      {/* Send us a message */}
+      <div className="flex-1 flex-col items-center justify-between mt-5 mb-5">
+    <form className="h-[620px] space-y-6 px-2 sm:p-8 md:p-8 lg:mx-10 bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700" action="#">
+          <br></br>
+          <h5 className="text-center font-bold text-xl text-gray-900 dark:text-white">Send Us a Message</h5>
+        <div>
+            <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Full Name *</label>
+            <input type="name" name="name" id="name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name@company.com" required />
+        </div>
+        <div>
+            <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email Address *</label>
+            <input type="email" name="email" id="email"  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required />
+            </div>
+        <div>
+            <label htmlFor="subject" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Subject</label>
+            <input type="text" name="subject" id="subject" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="name@company.com" required />
+            </div>
+            <div>
+            <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your message</label>
+            <textarea id="message" rows={4} className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your thoughts here..."></textarea>
+            </div>
+        <button type="submit" className="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Send Message</button>
+          <br></br>
+        </form>
+      </div>
+      {/* Contact info */}
+      <div className="flex-1  flex-col items-center justify-between mt-5 mb-5">
+    <form className="h-[620px] space-y-6 bg-white border border-gray-200 rounded-lg shadow-sm sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700" action="#">
+    <br></br> 
+          <h5 className="text-center font-bold text-xl text-gray-900 dark:text-white">Contact Information</h5>
+        {/* address */}
+            <div className="flex flex-row gap-2 px-5">
+        <div className="p-4 rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100 dark:hover:bg-gray-600 dark:bg-gray-700">
+         <div className="flex justify-center items-center p-2 mx-auto mb-2  dark:bg-gray-600 rounded-full w-[48px] h-[48px] max-w-[48px] max-h-[48px]">
+         <MapPin className='w-32 h-32 stroke-blue-500' />
+              </div>
+              </div>
+              <div>
+                <b className="font-bold">Address</b>
+                <p>123 Main Street</p>
+                <p>City, State 12345</p>
+              </div>
+            </div>
+            {/* phone */}
+            <div className="flex flex-row gap-2 px-5">
+        <div className="p-4 rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100 dark:hover:bg-gray-600 dark:bg-gray-700">
+         <div className="flex justify-center items-center p-2 mx-auto mb-2  dark:bg-gray-600 rounded-full w-[48px] h-[48px] max-w-[48px] max-h-[48px]">
+         <PhoneCall className='w-32 h-32 stroke-blue-500' />
+         </div>
+              </div>
+              <div>
+                <b className="font-bold">Phone</b>
+                <p>(123) 456-7890</p>
+              </div>
+            </div>
+            {/* email */}
+            <div className="flex flex-row gap-2 px-5">
+        <div className="p-4 rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100 dark:hover:bg-gray-600 dark:bg-gray-700">
+         <div className="flex justify-center items-center p-2 mx-auto mb-2  dark:bg-gray-600 rounded-full w-[48px] h-[48px] max-w-[48px] max-h-[48px]">
+         <Mail className='w-32 h-32 stroke-blue-500' />
+         </div>
+              </div>
+              <div>
+                <b className="font-bold">Email</b>
+                <p>cipa@org.com</p>
+              </div>
+            </div>
+            {/* follow us */}
+            <div className="flex flex-row gap-2 px-5">
+        <div className="p-4 rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100 dark:hover:bg-gray-600 dark:bg-gray-700">
+         <div className="flex justify-center items-center p-2 mx-auto mb-2  dark:bg-gray-600 rounded-full w-[48px] h-[48px] max-w-[48px] max-h-[48px]">
+         <Linkedin className='w-32 h-32 stroke-blue-500' />
+         </div>
+              </div>
+              <div>
+                <b className="font-bold">Follow Us</b>
+                <p>CIPA@Linkedin</p>
+              </div>
+          </div>
+          <br></br>
+    </form>
+      </div>
+    </div>
+  );
+}
